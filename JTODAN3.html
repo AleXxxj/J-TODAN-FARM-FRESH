@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J-TODAN GLOBAL FARM FRESH | Premium African Natural Foods</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #2e7d32;
+            --primary-dark: #1b5e20;
+            --secondary: #ff9800;
+            --light: #f5f5f5;
+            --dark: #333;
+            --gray: #757575;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #fff;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            color: var(--primary);
+            font-size: 28px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 20px;
+            color: var(--primary);
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-menu li {
+            margin-left: 25px;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-menu a:hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 180px 0 100px;
+            margin-top: 70px;
+        }
+        
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #e68900;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--secondary);
+            color: var(--secondary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--secondary);
+            color: white;
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Mission Section */
+        .mission-section {
+            background-color: var(--light);
+        }
+        
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .mission-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        .mission-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 30px;
+        }
+        
+        /* Store Section */
+        .store {
+            background-color: var(--light);
+        }
+        
+        .store-filters {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .filter-btn {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .store-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .store-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .store-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .store-item-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .store-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .store-item-info {
+            padding: 20px;
+        }
+        
+        .store-item-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--secondary);
+            margin: 10px 0;
+        }
+        
+        .add-to-cart {
+            width: 100%;
+            padding: 10px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .add-to-cart:hover {
+            background: var(--primary-dark);
+        }
+        
+        /* Process Section */
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 30px 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 30px;
+        }
+        
+        /* CEO Section */
+        .ceo-section {
+            background-color: var(--light);
+        }
+        
+        .ceo-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .ceo-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .ceo-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .ceo-text {
+            flex: 1;
+        }
+        
+        .ceo-text h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .ceo-text .title {
+            color: var(--gray);
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .profile-details {
+            margin-top: 30px;
+        }
+        
+        .profile-item {
+            margin-bottom: 15px;
+            display: flex;
+        }
+        
+        .profile-label {
+            font-weight: 600;
+            min-width: 180px;
+        }
+        
+        /* Blog Section */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .blog-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .blog-content {
+            padding: 20px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            color: var(--gray);
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .blog-meta span {
+            margin-right: 15px;
+        }
+        
+        .blog-content h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .read-more {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* Social Media Section */
+        .social-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .social-handles {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .social-handle {
+            display: flex;
+            align-items: center;
+            background: rgba(255,255,255,0.1);
+            padding: 15px 25px;
+            border-radius: 50px;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: white;
+        }
+
+        .social-handle:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-3px);
+        }
+
+        .social-handle i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--light);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 500px;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--light);
+        }
+        
+        .contact-container {
+            display: flex;
+            gap: 40px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-form {
+            flex: 1;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: background 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--secondary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #ccc;
+            font-size: 14px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .nav-menu li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero h2 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .about-content, .contact-container, .ceo-content {
+                flex-direction: column;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .profile-item {
+                flex-direction: column;
+            }
+            
+            .profile-label {
+                min-width: auto;
+                margin-bottom: 5px;
+            }
+
+            .social-handles {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .social-handle {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <h1>J-TODAN GLOBAL FARM FRESH</h1>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#mission">Our Mission</a></li>
+                <li><a href="#store">Store</a></li>
+                <li><a href="#process">Our Process</a></li>
+                <li><a href="#ceo">Our Founder</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#social">Social Media</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Premium African Natural Foods</h2>
+            <p>Bringing Africa's authentic taste to your table with high-quality dried vegetables and food products</p>
+            <a href="#store" class="btn">Shop Now</a>
+            <a href="#about" class="btn btn-outline">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About J-TODAN GLOBAL FARM FRESH</h2>
+                <p>Bringing Africa's Taste to Your Table</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>At J-TODAN GLOBAL FARM FRESH, we are passionate about bringing the taste of Africa to every home. Our specialty is in producing and distributing high-quality dry bitter leaf, dry ogbono, and other natural food products that are carefully processed to retain their freshness, nutrients, and authentic flavor.</p>
+                    <p>We are driven by the love for healthy living and the need to preserve our rich African food culture. Knowing that our products make cooking easier, healthier, and more enjoyable for families both locally and abroad keeps us motivated to deliver only the best.</p>
+                    <p>Our purpose is simple: to provide convenience, preserve culture, and promote healthy eating. By making African food staples accessible and easy to use, we ensure that traditions are not lost, and everyone can enjoy the meals they love, no matter where they live.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="African food products">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section" id="mission">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Vision & Mission</h2>
+                <p>Driven by passion, guided by purpose</p>
+            </div>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Our Motivation</h3>
+                    <p>We are driven by the love for healthy living and the need to preserve our rich African food culture. Knowing that our products make cooking easier, healthier, and more enjoyable for families both locally and abroad keeps us motivated to deliver only the best.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Purpose</h3>
+                    <p>Our purpose is simple: to provide convenience, preserve culture, and promote healthy eating. By making African food staples accessible and easy to use, we ensure that traditions are not lost, and everyone can enjoy the meals they love, no matter where they live.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-globe-africa"></i>
+                    </div>
+                    <h3>Our Future</h3>
+                    <p>The future of African food is global, and we are ready for it. Our vision is to grow into an internationally recognized brand, trusted for exporting and distributing African food products across the world—while upholding quality, authenticity, and excellence at every step.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Section -->
+    <section class="store" id="store">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Products</h2>
+                <p>Premium African natural foods delivered to your doorstep</p>
+            </div>
+            
+            <div class="store-filters">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="vegetables">Dried Vegetables</button>
+                <button class="filter-btn" data-filter="staple">Food Staples</button>
+                <button class="filter-btn" data-filter="spices">Spices & Herbs</button>
+            </div>
+            
+            <div class="store-grid">
+                <div class="store-item" data-category="vegetables">
+                    <div class="store-item-image">
+                        <img src="https://images.unsplash.com/photo-1595535873420-a599195b3f4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Dry Bitter Leaf">
+                    </div>
+                    <div class="store-item-info">
+                        <h3>Dry Bitter Leaf</h3>
+                        <p>Carefully dried bitter leaf perfect for traditional Nigerian soups. Retains nutrients and authentic flavor.</p>
+                        <div class="price">₦1,500 / 200g</div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="store-item" data-category="vegetables">
+                    <div class="store-item-image">
+                        <img src="https://images.unsplash.com/photo-1570194065657-91361806d7ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Dry Ogbono">
+                    </div>
+                    <div class="store-item-info">
+                        <h3>Dry Ogbono</h3>
+                        <p>Premium quality dried ogbono for making delicious and nutritious draw soups.</p>
+                        <div class="price">₦2,200 / 250g</div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="store-item" data-category="vegetables">
+                    <div class="store-item-image">
+                        <img src="https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Dry Ewedu">
+                    </div>
+                    <div class="store-item-info">
+                        <h3>Dry Ewedu</h3>
+                        <p>Convenient dried ewedu leaves for preparing the popular Yoruba soup.</p>
+                        <div class="price">₦1,800 / 200g</div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="store-item" data-category="vegetables">
+                    <div class="store-item-image">
+                        <img src="https://images.unsplash.com/photo-1592415499556-3d6aa6f59e6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Dry Ugu">
+                    </div>
+                    <div class="store-item-info">
+                        <h3>Dry Ugu (Fluted Pumpkin)</h3>
+                        <p>Nutrient-rich dried ugu leaves for soups, stews, and healthy meals.</p>
+                        <div class="price">₦1,600 / 200g</div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="store-item" data-category="staple">
+                    <div class="store-item-image">
+                        <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Garri">
+                    </div>
+                    <div class="store-item-info">
+                        <h3>Premium Garri</h3>
+                        <p>High-quality garri made from selected cassava, perfect for eba or soaking.</p>
+                        <div class="price">₦2,500 / 2kg</div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="store-item" data-category="spices">
+                    <div class="store-item-image">
+                        <img src="https://images.unsplash.com/photo-1592409065737-a253f2900fa8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Spices">
+                    </div>
+                    <div class="store-item-info">
+                        <h3>African Spice Blend</h3>
+                        <p>An aromatic blend of traditional African spices to enhance your dishes.</p>
+                        <div class="price">₦1,200 / 100g</div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Process</h2>
+                <p>From farm to your table, we maintain the highest quality standards at every step</p>
+            </div>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Farm Sourcing</h3>
+                    <p>We partner with local farms to source the freshest, highest quality vegetables at peak ripeness.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3>Specialized Drying</h3>
+                    <p>Our advanced drying technology preserves nutrients, flavor, and color while removing moisture.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3>Quality Packaging</h3>
+                    <p>We use airtight, moisture-proof packaging to ensure long shelf life and product freshness.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Global Delivery</h3>
+                    <p>We deliver locally and internationally with reliable shipping partners to ensure timely arrival.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CEO Section -->
+    <section class="ceo-section" id="ceo">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Founder</h2>
+                <p>Meet Joshua Oluwatobi Amos, the visionary behind J-TODAN GLOBAL NIG LTD</p>
+            </div>
+            <div class="ceo-content">
+                <div class="ceo-image">
+                    <img src="DSC_4452.jpg" alt="Joshua Oluwatobi Amos">
+                </div>
+                <div class="ceo-text">
+                    <h3>JOSHUA OLUWATOBI AMOS</h3>
+                    <div class="title">Founder & CEO</div>
+                    <p>My journey with FarmFresh began in my grandmother's kitchen in Nigeria, where I watched her preserve seasonal vegetables using traditional drying methods. She taught me that food preservation wasn't just about extending shelf life, but about capturing the essence of each vegetable at its peak.</p>
+                    <p>After studying food science at university, I combined traditional knowledge with modern technology to create FarmFresh. Our mission is simple: to make nutritious, flavorful dried vegetables accessible to everyone, while supporting local farmers and promoting sustainable food practices.</p>
+                    <p>Every package we deliver carries not just vegetables, but a piece of our commitment to quality, community, and the rich culinary heritage of Africa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <div class="container">
+            <div class="section-title">
+                <h2>From Our Blog</h2>
+                <p>Discover the world of African natural foods and healthy eating</p>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1547592188-6e103ecc9b84?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="African Cuisine">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> March 15, 2023</span>
+                            <span><i class="far fa-folder"></i> African Cuisine</span>
+                        </div>
+                        <h3>The Health Benefits of Traditional African Vegetables</h3>
+                        <p>Discover how indigenous African vegetables like bitter leaf, fluted pumpkin, and okra offer incredible nutritional benefits that have been valued for generations.</p>
+                        <a href="blog-health-benefits.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1556909114-4d0d853e5e15?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Food Preservation">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> February 28, 2023</span>
+                            <span><i class="far fa-folder"></i> Food Preservation</span>
+                        </div>
+                        <h3>Modern Drying Techniques vs Traditional Methods</h3>
+                        <p>Explore how modern drying technology preserves more nutrients compared to traditional sun-drying methods while maintaining authentic flavors.</p>
+                        <a href="blog-drying-techniques.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1556909114-4d0d853e5e15?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Cooking Tips">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> February 10, 2023</span>
+                            <span><i class="far fa-folder"></i> Cooking Tips</span>
+                        </div>
+                        <h3>5 Creative Ways to Use Dried Vegetables in Your Cooking</h3>
+                        <p>From enhancing soups and stews to creating flavorful rubs and seasonings, discover innovative ways to incorporate dried vegetables into your meals.</p>
+                        <a href="blog-cooking-tips.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-section" id="social">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Connect With Us</h2>
+                <p style="color: rgba(255,255,255,0.8);">Follow us on social media for updates, recipes, and more!</p>
+            </div>
+            <div class="social-handles">
+                <a href="https://facebook.com/jtodanglobal" class="social-handle" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>@jtodanglobal</span>
+                </a>
+                <a href="https://instagram.com/jtodanglobal" class="social-handle" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    <span>@jtodanglobal</span>
+                </a>
+                <a href="https://twitter.com/jtodanglobal" class="social-handle" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                    <span>@jtodanglobal</span>
+                </a>
+                <a href="https://wa.me/2348123456789" class="social-handle" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>+234 812 345 6789</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about African natural foods and our products</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What are the benefits of dried vegetables over fresh ones?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Dried vegetables retain most of their nutritional value while having a much longer shelf life. They're convenient, lightweight, and perfect for storage. Our drying process specifically preserves vitamins, minerals, and flavor compounds that make them nutritionally comparable to fresh vegetables.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How should I store dried vegetables?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Store dried vegetables in a cool, dark place in airtight containers. Avoid exposure to moisture, heat, and direct sunlight. Properly stored, our dried vegetables can last up to 12 months while maintaining quality and flavor.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What traditional African vegetables do you offer?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We specialize in both common and traditional African vegetables including bitter leaf, ogbono, ewedu, fluted pumpkin (ugu), and more. We're constantly working with local farmers to introduce more indigenous varieties to our product line.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you ship internationally?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we ship to most countries worldwide. Our packaging is designed to withstand international shipping while maintaining product quality. Shipping costs and delivery times vary by destination.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I rehydrate dried vegetables?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most dried vegetables can be rehydrated by soaking in warm water for 20-30 minutes. Alternatively, you can add them directly to soups, stews, or sauces where they will rehydrate during cooking. Specific instructions are provided on each product package.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us for orders, wholesale inquiries, or any questions</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Our Location</h3>
+                            <p>123 Agricultural Zone, Ogbomosho, Oyo State, Nigeria</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Phone Number</h3>
+                            <p>+234 (0) 812 345 6789</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email Address</h3>
+                            <p>info@jtodanglobal.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3>Business Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                            <p>Saturday: 10:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>J-TODAN GLOBAL NIG LTD</h3>
+                    <p>Bringing Africa's authentic taste to your table with high-quality dried vegetables and food products.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/jtodanglobal" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/jtodanglobal" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/jtodanglobal" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/2348123456789" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#mission">Our Mission</a></li>
+                        <li><a href="#store">Store</a></li>
+                        <li><a href="#ceo">Our Founder</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#social">Social Media</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Our Products</h3>
+                    <ul>
+                        <li><a href="#store">Dry Bitter Leaf</a></li>
+                        <li><a href="#store">Dry Ogbono</a></li>
+                        <li><a href="#store">Dry Ewedu</a></li>
+                        <li><a href="#store">Dry Ugu</a></li>
+                        <li><a href="#store">Premium Garri</a></li>
+                        <li><a href="#store">African Spices</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates on new products and special offers.</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your email address" required>
+                        </div>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 J-TODAN GLOBAL NIG LTD. All rights reserved. | Bringing Africa's Taste to Your Table</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-menu').classList.remove('active');
+            });
+        });
+        
+        // Simple form submission handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+        
+        // Store filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const storeItems = document.querySelectorAll('.store-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filter = button.getAttribute('data-filter');
+                
+                storeItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // FAQ accordion functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Add to cart functionality
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const product = button.parentElement.querySelector('h3').textContent;
+                alert(`${product} has been added to your cart!`);
+            });
+        });
+
+        // Blog links now point to actual pages (you need to create these pages)
+        // For now, they'll show an alert since the pages don't exist yet
+        document.querySelectorAll('.read-more').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('This blog post page is coming soon! In a real website, this would link to the full article.');
+            });
+        });
+    </script>
+</body>
+</html>
