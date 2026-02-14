@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5 Creative Ways to Use Dried Vegetables in Your Cooking | J-TODAN GLOBAL FARM FRESH</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Copy all the css styles from the main website here */
+    :root {
+      --primary: #2e7d32;
+      --primary-dark: #1b5e20;
+      --secondary: #ff9800;
+      --light: #f5f5f5;
+      --dark: #333;
+      --gray: #757575;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      line-height: 1.6; 
+      color: var(--dark); 
+      background-color: #fff;
+    }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+
+    /* Header styles - copy from main site */
+    header {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+    .logo { display: flex; align-items: center; }
+    .logo i { color: var(--primary); font-size: 28px; margin-right: 10px; }
+    .logo h1 { font-size: 20px; color: var(--primary); }
+    .nav-menu { display: flex; list-style: none; }
+    .nav-menu li { margin-left: 25px; }
+    .nav-menu a { text-decoration: none; color: var(--dark); font-weight: 500; }
+    .nav-menu a:hover { color: var(--primary); }
+
+    /* Mobile menu - add this for responsiveness */
+    .mobile-menu {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Blog Content Styles */
+    .blog-header {
+      padding: 150px 0 50px;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('COOKINGTIPS.JPG');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      margin-top: 70px;
+    }
+    .blog-header h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .blog-content {
+      padding: 50px 0;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .blog-meta {
+      color: rgba(255,255,255,0.8);
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+    .blog-meta span {
+      margin-right: 15px;
+    }
+    .blog-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 30px 0;
+    }
+    .blog-content h2 {
+      color: var(--primary);
+      margin: 30px 0 15px;
+    }
+    .blog-content h3 {
+      color: var(--primary-dark);
+      margin: 25px 0 10px;
+      font-size: 22px;
+    }
+    .blog-content p {
+      margin-bottom: 15px;
+    }
+    .blog-content ul, .blog-content ol {
+      margin: 15px 0 25px 40px;
+    }
+    .blog-content li {
+      margin-bottom: 8px;
+    }
+    .back-btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 30px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .back-btn:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Recipe Card Styles */
+    .recipe-card {
+      background: var(--light);
+      border-radius: 10px;
+      padding: 25px;
+      margin: 30px 0;
+      border-left: 5px solid var(--primary);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    .recipe-card h3 {
+      color: var(--primary);
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+    }
+    .recipe-card h3 i {
+      margin-right: 10px;
+      color: var(--secondary);
+    }
+    .tip-number {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 30px;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    /* Footer styles */
+    footer {
+      background: var(--primary-dark);
+      color: white;
+      padding: 40px 0 20px;
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      }
+      .nav-menu.active {
+        display: flex;
+      }
+      .nav-menu li {
+        margin: 10px 0;
+      }
+      .mobile-menu {
+        display: block;
+      }
+      .blog-header h1 {
+        font-size: 28px;
+      }
+      .blog-image {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header - Same as main site -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <i class="fas fa-leaf"></i>
+        <h1>J-TODAN GLOBAL FARM FRESH</h1>
+      </div>
+      <div class="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#store">Store</a></li>
+        <li><a href="index.html#blog">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Blog Header -->
+  <div class="blog-header">
+    <div class="container">
+      <h1>5 Creative Ways to Use Dried Vegetables in Your Cooking</h1>
+      <div class="blog-meta">
+        <span><i class="far fa-calendar"></i> February 10, 2023</span>
+        <span><i class="far fa-folder"></i> Cooking Tips</span>
+        <span><i class="far fa-clock"></i> 7 min read</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog Content -->
+  <div class="container">
+    <div class="blog-content">
+      <img src="COOKINGTIPS.JPG" alt="Creative Cooking with Dried Vegetables" class="blog-image">
+
+      <h2>Beyond Traditional Soups: Unleashing the Versatility of Dried Vegetables</h2>
+      <p>Most people know dried vegetables for traditional soups like ofe onugbu, ewedu, and ogbono. But these nutrient-packed ingredients can do so much more! Here are five creative ways to incorporate J-TODAN dried vegetables into your daily cooking.</p>
+
+      <div class="recipe-card">
+        <h3><span class="tip-number">1</span> Bitter Leaf Tea for Wellness</h3>
+        <p>Start your day with a healthy twist! Bitter leaf tea is known for its medicinal properties including blood sugar regulation and digestion aid.</p>
+        <h4>How to Make:</h4>
+        <ul>
+          <li>Take 1 tablespoon of J-TODAN dried bitter leaf</li>
+          <li>Steep in 2 cups of hot water for 10-15 minutes</li>
+          <li>Strain and add honey or lemon to taste</li>
+          <li>Enjoy warm as a morning or evening tea</li>
+        </ul>
+        <p><strong>Pro Tip:</strong> Add a slice of ginger and cinnamon stick for extra flavor and health benefits!</p>
+      </div>
+
+      <div class="recipe-card">
+        <h3><span class="tip-number">2</span> Ugu Power Smoothies</h3>
+        <p>Boost your smoothie with the iron-rich goodness of ugu leaves. Perfect for pregnant women, athletes, or anyone needing an energy boost.</p>
+        <h4>Green Power Smoothie Recipe:</h4>
+        <ul>
+          <li>2 tablespoons rehydrated J-TODAN ugu leaves</li>
+          <li>1 ripe banana</li>
+          <li>1 cup pineapple chunks</li>
+          <li>1/2 cup Greek yogurt</li>
+          <li>1 tablespoon honey</li>
+          <li>1/2 cup water or coconut water</li>
+        </ul>
+        <p>Blend until smooth and enjoy a nutrient-packed breakfast!</p>
+      </div>
+
+      <div class="recipe-card">
+        <h3><span class="tip-number">3</span> Dried Vegetable Seasoning Powder</h3>
+        <p>Create your own all-natural seasoning blend that adds depth and nutrition to any dish.</p>
+        <h4>How to Make:</h4>
+        <ul>
+          <li>Take equal parts dried bitter leaf, ugu, and ewedu</li>
+          <li>Grind to a fine powder using a blender or food processor</li>
+          <li>Mix with salt, pepper, and other spices</li>
+          <li>Store in an airtight jar</li>
+        </ul>
+        <h4>Use On:</h4>
+        <ul>
+          <li>Rice dishes and jollof rice</li>
+          <li>Grilled meats and fish</li>
+          <li>Roasted vegetables</li>
+          <li>Popcorn for a healthy snack</li>
+          <li>Eggs and omelets</li>
+        </ul>
+      </div>
+
+      <div class="recipe-card">
+        <h3><span class="tip-number">4</span> Ogbono Thickened Stews and Gravies</h3>
+        <p>Beyond ogbono soup, use ogbono as a natural thickener for all kinds of stews and gravies.</p>
+        <h4>Ogbono Gravy Recipe:</h4>
+        <ul>
+          <li>2 tablespoons J-TODAN ogbono powder</li>
+          <li>1 tablespoon palm oil or vegetable oil</li>
+          <li>1 cup meat or vegetable stock</li>
+          <li>Seasonings of your choice</li>
+        </ul>
+        <h4>Instructions:</h4>
+        <ol>
+          <li>Heat oil in a pan</li>
+          <li>Add ogbono powder and stir for 2 minutes</li>
+          <li>Slowly add stock while whisking to prevent lumps</li>
+          <li>Simmer until thickened to desired consistency</li>
+          <li>Use over rice, potatoes, or as a base for meat dishes</li>
+        </ol>
+      </div>
+
+      <div class="recipe-card">
+        <h3><span class="tip-number">5</span> Dried Vegetable Rice Cooker Meals</h3>
+        <p>The easiest way to add vegetables to your meals - just toss them in the rice cooker!</p>
+        <h4>One-Pot Rice Cooker Meal:</h4>
+        <ul>
+          <li>2 cups rice</li>
+          <li>3 cups water or stock</li>
+          <li>1/4 cup mixed dried vegetables (ugu, bitter leaf, ewedu)</li>
+          <li>1 teaspoon salt</li>
+          <li>2 tablespoons oil</li>
+          <li>Optional: protein of your choice</li>
+        </ul>
+        <h4>Instructions:</h4>
+        <ol>
+          <li>Add all ingredients to rice cooker</li>
+          <li>Stir to combine</li>
+          <li>Cook as you normally cook rice</li>
+          <li>The vegetables will rehydrate during cooking</li>
+          <li>Fluff and serve - a complete meal in one pot!</li>
+        </ol>
+      </div>
+
+      <h2>Bonus Tips for Cooking with Dried Vegetables</h2>
+      
+      <h3>Proper Rehydration Guide:</h3>
+      <ul>
+        <li><strong>Bitter Leaf:</strong> Soak 20-30 minutes, rinse to reduce bitterness</li>
+        <li><strong>Ewedu:</strong> Soak 15-20 minutes, retains slimy texture</li>
+        <li><strong>Ugu:</strong> Soak 10-15 minutes, best added at the end of cooking</li>
+        <li><strong>Ogbono:</strong> Use directly as powder, no soaking needed</li>
+      </ul>
+
+      <h3>Storage Tips:</h3>
+      <ul>
+        <li>Always reseal packaging tightly after use</li>
+        <li>Store in a cool, dry place away from sunlight</li>
+        <li>Use clean, dry spoons when removing from package</li>
+        <li>Can be stored for 12+ months when properly sealed</li>
+      </ul>
+
+      <h2>Why These Methods Work</h2>
+      <p>J-TODAN dried vegetables are specially processed to retain their nutrients and flavor. Unlike fresh vegetables that wilt and spoil, our dried versions:</p>
+      <ul>
+        <li>Rehydrate quickly and consistently</li>
+        <li>Maintain nutritional value</li>
+        <li>Offer convenience without compromise</li>
+        <li>Allow you to enjoy African vegetables year-round</li>
+      </ul>
+
+      <div style="background: var(--primary); color: white; padding: 20px; border-radius: 10px; margin: 30px 0;">
+        <h3 style="color: white; margin-top: 0;">📢 We Want to Hear From You!</h3>
+        <p>Have you tried any creative ways to use dried vegetables? Share your recipes with us on social media using <strong>#JtodanRecipes</strong> and tag us @jtodanglobal. Your recipe might be featured in our next blog post!</p>
+      </div>
+
+      <p>Remember, dried vegetables are incredibly versatile. Don't limit them to just traditional soups. Experiment, be creative, and discover new ways to enjoy the authentic taste of Africa in your everyday cooking!</p>
+
+      <a href="index.html#blog" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 J-TODAN GLOBAL FARM FRESH. All rights reserved. | Bringing Africa's Taste to Your Table</p>
+    </div>
+  </footer>
+
+  <!-- Mobile menu script -->
+  <script>
+    document.querySelector('.mobile-menu').addEventListener('click', function() {
+      document.querySelector('.nav-menu').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
