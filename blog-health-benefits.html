@@ -16,8 +16,13 @@
       --gray: #757575;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--dark); }
-    .container { width: 90%; max-width: 800px; margin: 0 auto; padding: 0 15px; }
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      line-height: 1.6; 
+      color: var(--dark); 
+      background-color: #fff;
+    }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
 
     /* Header styles - copy from main site */
     header {
@@ -42,6 +47,13 @@
     .nav-menu a { text-decoration: none; color: var(--dark); font-weight: 500; }
     .nav-menu a:hover { color: var(--primary); }
 
+    /* Mobile menu - add this for responsiveness */
+    .mobile-menu {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
     /* Blog Content Styles */
     .blog-header {
       padding: 150px 0 50px;
@@ -52,14 +64,24 @@
       color: white;
       margin-top: 70px;
     }
+    .blog-header h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
     .blog-content {
       padding: 50px 0;
+      max-width: 800px;
+      margin: 0 auto;
     }
     .blog-meta {
-      color: var(--gray);
-      margin-bottom: 30px;
+      color: rgba(255,255,255,0.8);
+      margin-top: 20px;
       display: flex;
       gap: 20px;
+      justify-content: center;
+    }
+    .blog-meta span {
+      margin-right: 15px;
     }
     .blog-image {
       width: 100%;
@@ -68,15 +90,76 @@
       border-radius: 10px;
       margin: 30px 0;
     }
+    .blog-content h2 {
+      color: var(--primary);
+      margin: 30px 0 15px;
+    }
+    .blog-content h3 {
+      color: var(--primary-dark);
+      margin: 25px 0 10px;
+    }
+    .blog-content p {
+      margin-bottom: 15px;
+    }
+    .blog-content ul, .blog-content ol {
+      margin: 15px 0 25px 40px;
+    }
+    .blog-content li {
+      margin-bottom: 8px;
+    }
     .back-btn {
       display: inline-block;
       background: var(--primary);
       color: white;
-      padding: 10px 20px;
+      padding: 12px 25px;
       border-radius: 5px;
       text-decoration: none;
       margin-top: 30px;
-    }      
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .back-btn:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Footer styles */
+    footer {
+      background: var(--primary-dark);
+      color: white;
+      padding: 40px 0 20px;
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      }
+      .nav-menu.active {
+        display: flex;
+      }
+      .nav-menu li {
+        margin: 10px 0;
+      }
+      .mobile-menu {
+        display: block;
+      }
+      .blog-header h1 {
+        font-size: 28px;
+      }
+      .blog-image {
+        height: 250px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -87,10 +170,14 @@
         <i class="fas fa-leaf"></i>
         <h1>J-TODAN GLOBAL FARM FRESH</h1>
       </div>
+      <div class="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
       <ul class="nav-menu">
         <li><a href="index.html#home">Home</a></li>
-        <li><a href="index.html#blog">Blog</a></li>
+        <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#store">Store</a></li>
+        <li><a href="index.html#blog">Blog</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </div>
@@ -101,7 +188,7 @@
     <div class="container">
       <h1>The Health Benefits of Traditional African Vegetables</h1>
       <div class="blog-meta">
-        <span><i class="far fa-calender"></i> March 15, 2023</span>
+        <span><i class="far fa-calendar"></i> March 15, 2023</span>
         <span><i class="far fa-folder"></i> African Cuisine</span>
         <span><i class="far fa-clock"></i> 5 min read</span>
       </div>
@@ -109,60 +196,76 @@
   </div>
 
   <!-- Blog Content -->
-  <div class="container blog-content">
-    <img src="AFRICANCUISINE.PNG" alt="African vegetables" class="blog-image">
+  <div class="container">
+    <div class="blog-content">
+      <img src="AFRICANCUISINE.PNG" alt="African vegetables" class="blog-image">
 
-    <h2>Discover Nature's  Pharmacy in Your Kitchen</h2>
-    <p>Traditional African vegetables are more than just food - they're nature's  medicine cabinet. For generations, our ancestors have used these plants not only for nourishment but also for healing various ailments.</p>
+      <h2>Discover Nature's Pharmacy in Your Kitchen</h2>
+      <p>Traditional African vegetables are more than just food - they're nature's medicine cabinet. For generations, our ancestors have used these plants not only for nourishment but also for healing various ailments.</p>
 
-    <h3>Bitter leaf (Vernonia amygdalina)</h3>
-    <p>Bitter leaf, known as "ewuro" in Yoruba or "onugbu" in Igbo, is packed with incredible health benefits:</p>
-    <ul>
-      <li><strong>Diabetes Management:</strong> Contains compounds that help regulate blood sugar levels</li>
-      <li><strong>Liver Protection:</strong> Helps detoxify and protect the liver from damage</li>
-      <li><strong>Antioxidant Rich:</strong> Fights free radicals and reduces inflammation</li>
-      <li><strong>Digestive Health:</strong> Aids digestion and relieves stomach issues</li>
-    </ul>
-    
-    <h3>Ugu (Fluted pumpkin Leaves)</h3>
-    <p>These nutrient-dense leaves are a staple in Nigeriann cuisine:</p>
-    <ul>
-      <li><strong>Iron Boost:</strong> Excellent for preventing anemia</li>
-      <li><strong>Pregnancy Superfood:</strong> Supports fetal development</li>
-      <li><strong>Immune Support:</strong> High in vitamins A, C, and E</li>
-      <li><strong>Bone Health:</strong> Rich in calcium and phosphorus</li>
-    </ul>
+      <h3>Bitter Leaf (Vernonia amygdalina)</h3>
+      <p>Bitter leaf, known as "ewuro" in Yoruba or "onugbu" in Igbo, is packed with incredible health benefits:</p>
+      <ul>
+        <li><strong>Diabetes Management:</strong> Contains compounds that help regulate blood sugar levels</li>
+        <li><strong>Liver Protection:</strong> Helps detoxify and protect the liver from damage</li>
+        <li><strong>Antioxidant Rich:</strong> Fights free radicals and reduces inflammation</li>
+        <li><strong>Digestive Health:</strong> Aids digestion and relieves stomach issues</li>
+      </ul>
+      
+      <h3>Ugu (Fluted Pumpkin Leaves)</h3>
+      <p>These nutrient-dense leaves are a staple in Nigerian cuisine:</p>
+      <ul>
+        <li><strong>Iron Boost:</strong> Excellent for preventing anemia</li>
+        <li><strong>Pregnancy Superfood:</strong> Supports fetal development</li>
+        <li><strong>Immune Support:</strong> High in vitamins A, C, and E</li>
+        <li><strong>Bone Health:</strong> Rich in calcium and phosphorus</li>
+      </ul>
 
-    <h3>Ewedu (jute Leaves)</h3>
-    <p>The slimy texture of ewedu is actually mucilage, which offers unique benefits:</p>
-    <ul>
-      <li><strong>Digestive Aid:</strong> The mucilage soothes the digestive tract</li>
-      <li><strong>Cholesterol Control:</strong> Helps reduce bad cholesterol levels</li>
-      <li><strong>Skin Health:</strong> Promotes healthy, glowing skin</li>
-      <li><strong>Weight Management:</strong> Low in calories, high in fiber</li>
-    </ul>
+      <h3>Ewedu (Jute Leaves)</h3>
+      <p>The slimy texture of ewedu is actually mucilage, which offers unique benefits:</p>
+      <ul>
+        <li><strong>Digestive Aid:</strong> The mucilage soothes the digestive tract</li>
+        <li><strong>Cholesterol Control:</strong> Helps reduce bad cholesterol levels</li>
+        <li><strong>Skin Health:</strong> Promotes healthy, glowing skin</li>
+        <li><strong>Weight Management:</strong> Low in calories, high in fiber</li>
+      </ul>
 
-    <h2>How to Incorporate These Vegetables Into Your Diet</h2>
-    <p>At J-TODAN, we make it easy to enjoy these health benefits. Our dried vegetables retain up to 90% of their nutritional value while offering convenience:</p>
-    <ol>
-      <li><strong>Bitter Leaf Tea:</strong> Steep dried bitter leaf in hot water for a medicinal tea</li>
-      <li><strong>Ugu Smoothies:</strong> Add rehydrated ugu to your morning smoothie</li>
-      <li><strong>Taditional Soups:</strong> Prepare ofe onugbu or ewedu soup with our products</li>
-      <li><strong>Seasoning:</strong> Grind dried vegetables into powder for seasoning</li>
-    </ol>
-    
-    <h2>Why choose J-TODAN Dried Vegetables?</h2>
-    <p>Our drying process carefully preserves the nutrients and medicinal properties of these vegetables. Unlike fresh vegetables that spoil quickly, our dried versions:</p>
-    <ul>
-      <li>Last 12+ months without refrigeration</li>
-      <li>Retain authentic flavor and nutrients</li>
-      <li>Are convenient and ready to use</li>
-      <li>Perfect for Nigerians abroad missing home flavors</li>
-    </ul>
+      <h2>How to Incorporate These Vegetables Into Your Diet</h2>
+      <p>At J-TODAN, we make it easy to enjoy these health benefits. Our dried vegetables retain up to 90% of their nutritional value while offering convenience:</p>
+      <ol>
+        <li><strong>Bitter Leaf Tea:</strong> Steep dried bitter leaf in hot water for a medicinal tea</li>
+        <li><strong>Ugu Smoothies:</strong> Add rehydrated ugu to your morning smoothie</li>
+        <li><strong>Traditional Soups:</strong> Prepare ofe onugbu or ewedu soup with our products</li>
+        <li><strong>Seasoning:</strong> Grind dried vegetables into powder for seasoning</li>
+      </ol>
+      
+      <h2>Why Choose J-TODAN Dried Vegetables?</h2>
+      <p>Our drying process carefully preserves the nutrients and medicinal properties of these vegetables. Unlike fresh vegetables that spoil quickly, our dried versions:</p>
+      <ul>
+        <li>Last 12+ months without refrigeration</li>
+        <li>Retain authentic flavor and nutrients</li>
+        <li>Are convenient and ready to use</li>
+        <li>Perfect for Nigerians abroad missing home flavors</li>
+      </ul>
 
-    <p>Remember, <b>good health</b> starts in the kitchen. By incorporating these traditional African vegetables into your diet, you're not just eating - you're healing your body with nature's wisdom.</p>
+      <p>Remember, <strong>good health</strong> starts in the kitchen. By incorporating these traditional African vegetables into your diet, you're not just eating - you're healing your body with nature's wisdom.</p>
 
-    <a href="index.html#blog" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+      <a href="index.html#blog" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+    </div>
   </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 J-TODAN GLOBAL FARM FRESH. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile menu script -->
+  <script>
+    document.querySelector('.mobile-menu').addEventListener('click', function() {
+      document.querySelector('.nav-menu').classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
