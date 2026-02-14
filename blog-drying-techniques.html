@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Drying Techniques vs Traditional Methods | J-TODAN GLOBAL FARM FRESH</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Copy all the css styles from the main website here */
+    :root {
+      --primary: #2e7d32;
+      --primary-dark: #1b5e20;
+      --secondary: #ff9800;
+      --light: #f5f5f5;
+      --dark: #333;
+      --gray: #757575;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      line-height: 1.6; 
+      color: var(--dark); 
+      background-color: #fff;
+    }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+
+    /* Header styles - copy from main site */
+    header {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+    .logo { display: flex; align-items: center; }
+    .logo i { color: var(--primary); font-size: 28px; margin-right: 10px; }
+    .logo h1 { font-size: 20px; color: var(--primary); }
+    .nav-menu { display: flex; list-style: none; }
+    .nav-menu li { margin-left: 25px; }
+    .nav-menu a { text-decoration: none; color: var(--dark); font-weight: 500; }
+    .nav-menu a:hover { color: var(--primary); }
+
+    /* Mobile menu - add this for responsiveness */
+    .mobile-menu {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Blog Content Styles */
+    .blog-header {
+      padding: 150px 0 50px;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('DRYINGMETHOD.PNG');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      margin-top: 70px;
+    }
+    .blog-header h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .blog-content {
+      padding: 50px 0;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .blog-meta {
+      color: rgba(255,255,255,0.8);
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+    .blog-meta span {
+      margin-right: 15px;
+    }
+    .blog-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 30px 0;
+    }
+    .blog-content h2 {
+      color: var(--primary);
+      margin: 30px 0 15px;
+    }
+    .blog-content h3 {
+      color: var(--primary-dark);
+      margin: 25px 0 10px;
+    }
+    .blog-content p {
+      margin-bottom: 15px;
+    }
+    .blog-content ul, .blog-content ol {
+      margin: 15px 0 25px 40px;
+    }
+    .blog-content li {
+      margin-bottom: 8px;
+    }
+    .back-btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 30px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .back-btn:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Comparison Table */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0;
+    }
+    .comparison-table th {
+      background: var(--primary);
+      color: white;
+      padding: 12px;
+      text-align: left;
+    }
+    .comparison-table td {
+      padding: 12px;
+      border: 1px solid #ddd;
+    }
+    .comparison-table tr:nth-child(even) {
+      background: var(--light);
+    }
+    .check-mark {
+      color: var(--primary);
+      font-weight: bold;
+    }
+    .x-mark {
+      color: #e74c3c;
+      font-weight: bold;
+    }
+
+    /* Footer styles */
+    footer {
+      background: var(--primary-dark);
+      color: white;
+      padding: 40px 0 20px;
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      }
+      .nav-menu.active {
+        display: flex;
+      }
+      .nav-menu li {
+        margin: 10px 0;
+      }
+      .mobile-menu {
+        display: block;
+      }
+      .blog-header h1 {
+        font-size: 28px;
+      }
+      .blog-image {
+        height: 250px;
+      }
+      .comparison-table {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header - Same as main site -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <i class="fas fa-leaf"></i>
+        <h1>J-TODAN GLOBAL FARM FRESH</h1>
+      </div>
+      <div class="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#store">Store</a></li>
+        <li><a href="index.html#blog">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Blog Header -->
+  <div class="blog-header">
+    <div class="container">
+      <h1>Modern Drying Techniques vs Traditional Methods</h1>
+      <div class="blog-meta">
+        <span><i class="far fa-calendar"></i> February 28, 2023</span>
+        <span><i class="far fa-folder"></i> Food Preservation</span>
+        <span><i class="far fa-clock"></i> 6 min read</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog Content -->
+  <div class="container">
+    <div class="blog-content">
+      <img src="DRYINGMETHOD.PNG" alt="Food Preservation Methods" class="blog-image">
+
+      <h2>The Art and Science of Preserving African Vegetables</h2>
+      <p>For centuries, African communities have preserved vegetables using traditional sun-drying methods. Today, modern technology offers new ways to retain nutrients while extending shelf life. At J-TODAN, we combine the wisdom of both approaches to deliver the highest quality dried vegetables.</p>
+
+      <h2>Traditional Sun-Drying Method</h2>
+      <p>Our grandmothers knew the value of the sun. Traditional drying involves spreading fresh vegetables under the hot African sun for several days. This method has been used for generations and has its own merits:</p>
+      
+      <h3>Advantages of Traditional Drying:</h3>
+      <ul>
+        <li><strong>Cost-Effective:</strong> No special equipment needed</li>
+        <li><strong>Natural Process:</strong> Uses only sunlight and air</li>
+        <li><strong>Cultural Heritage:</strong> Preserves traditional knowledge</li>
+        <li><strong>Accessible:</strong> Can be done anywhere with sunlight</li>
+      </ul>
+
+      <h3>Disadvantages of Traditional Drying:</h3>
+      <ul>
+        <li><strong>Nutrient Loss:</strong> UV rays can degrade vitamins A and C</li>
+        <li><strong>Weather Dependent:</strong> Rain or clouds can spoil the batch</li>
+        <li><strong>Contamination Risk:</strong> Dust, insects, and animals can affect quality</li>
+        <li><strong>Inconsistent Results:</strong> Drying time varies with weather conditions</li>
+        <li><strong>Longer Time:</strong> Can take 3-7 days depending on sun intensity</li>
+      </ul>
+
+      <h2>Modern Drying Technology</h2>
+      <p>At J-TODAN, we use advanced drying equipment that precisely controls temperature, humidity, and airflow. This technology was developed to address the limitations of traditional methods while preserving the authentic taste our customers love.</p>
+
+      <h3>Advantages of Modern Drying:</h3>
+      <ul>
+        <li><strong>Nutrient Preservation:</strong> Retains up to 90% of vitamins and minerals</li>
+        <li><strong>Consistent Quality:</strong> Every batch is uniform and reliable</li>
+        <li><strong>Hygienic Process:</strong> Enclosed system prevents contamination</li>
+        <li><strong>Weather Independent:</strong> Can dry year-round regardless of conditions</li>
+        <li><strong>Faster Processing:</strong> Complete drying in 8-12 hours</li>
+        <li><strong>Color Retention:</strong> Vegetables maintain their natural vibrant colors</li>
+      </ul>
+
+      <h2>Comparison: Traditional vs Modern Drying</h2>
+      
+      <table class="comparison-table">
+        <tr>
+          <th>Factor</th>
+          <th>Traditional Drying</th>
+          <th>J-TODAN Modern Drying</th>
+        </tr>
+        <tr>
+          <td><strong>Time Required</strong></td>
+          <td>3-7 days</td>
+          <td>8-12 hours <span class="check-mark">✓</span></td>
+        </tr>
+        <tr>
+          <td><strong>Nutrient Retention</strong></td>
+          <td>60-70%</td>
+          <td>85-90% <span class="check-mark">✓</span></td>
+        </tr>
+        <tr>
+          <td><strong>Weather Dependent</strong></td>
+          <td>Yes <span class="x-mark">✗</span></td>
+          <td>No <span class="check-mark">✓</span></td>
+        </tr>
+        <tr>
+          <td><strong>Contamination Risk</strong></td>
+          <td>High <span class="x-mark">✗</span></td>
+          <td>Very Low <span class="check-mark">✓</span></td>
+        </tr>
+        <tr>
+          <td><strong>Color Preservation</strong></td>
+          <td>Fades over time</td>
+          <td>Vibrant color retained <span class="check-mark">✓</span></td>
+        </tr>
+        <tr>
+          <td><strong>Shelf Life</strong></td>
+          <td>6-8 months</td>
+          <td>12+ months <span class="check-mark">✓</span></td>
+        </tr>
+        <tr>
+          <td><strong>Authentic Flavor</strong></td>
+          <td>Traditional taste</td>
+          <td>Enhanced natural flavor <span class="check-mark">✓</span></td>
+        </tr>
+      </table>
+
+      <h2>The J-TODAN Difference: Best of Both Worlds</h2>
+      <p>At J-TODAN GLOBAL FARM FRESH, we honor traditional knowledge while embracing modern technology. Our process:</p>
+      <ol>
+        <li><strong>Farm Selection:</strong> We source from local farmers who use traditional growing methods</li>
+        <li><strong>Harvest at Peak:</strong> Vegetables are picked at the perfect ripeness</li>
+        <li><strong>Gentle Cleaning:</strong> Washed carefully to remove impurities</li>
+        <li><strong>Controlled Drying:</strong> Using optimal temperature (45-50°C) to preserve nutrients</li>
+        <li><strong>Quality Testing:</strong> Each batch is checked for moisture content and quality</li>
+        <li><strong>Hermetic Packaging:</strong> Sealed to maintain freshness for months</li>
+      </ol>
+
+      <h2>Why This Matters for You</h2>
+      <p>When you choose J-TODAN dried vegetables, you're getting:</p>
+      <ul>
+        <li><strong>More Nutrition:</strong> Higher vitamin and mineral content</li>
+        <li><strong>Better Taste:</strong> Vegetables taste closer to fresh</li>
+        <li><strong>Longer Storage:</strong> Stock up without worrying about spoilage</li>
+        <li><strong>Food Safety:</strong> Clean, hygienic processing you can trust</li>
+        <li><strong>Year-Round Availability:</strong> Enjoy your favorite vegetables anytime</li>
+      </ul>
+
+      <p>We believe in preserving tradition while improving quality. Our drying technology doesn't replace the wisdom of our ancestors—it enhances it, ensuring that future generations can continue to enjoy the nutritious, flavorful vegetables that have sustained African communities for centuries.</p>
+
+      <a href="index.html#blog" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 J-TODAN GLOBAL FARM FRESH. All rights reserved. | Bringing Africa's Taste to Your Table</p>
+    </div>
+  </footer>
+
+  <!-- Mobile menu script -->
+  <script>
+    document.querySelector('.mobile-menu').addEventListener('click', function() {
+      document.querySelector('.nav-menu').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
